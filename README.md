@@ -1,4 +1,23 @@
-# jizhicms
+# CVE-2025-69901: JizhiCMS Authentication Bypass Vulnerability
+
+## Overview
+- **CVE ID:** CVE-2025-69**1
+- **Vendor:** JizhiCMS
+- **Product:** JizhiCMS
+- **Version:** v2.5 and v2.5.4
+- **Vulnerability Type:** Incorrect Access Control / Session Poisoning
+- **Affected Component:** LoginController.php
+
+## Description
+JizhiCMS v2.5 and v2.5.4 contain an Authentication Bypass vulnerability in the LoginController.php component. The vulnerability is caused by insecure usage of session variables (Session Poisoning) combined with PHP weak type comparisons. An unauthenticated remote attacker can exploit this issue to bypass the login mechanism and gain administrative access to the backend dashboard.
+
+## Proof of Concept (PoC)
+
+To exploit the vulnerability, an attacker sends a crafted HTTP request manipulating the session parameters (specifically 'frcode') to bypass the weak type comparison check.
+I’ve put the poc in thIS repo.
+
+
+# Details
 
 这是一个典型的组合漏洞，由 **Session 变量覆盖（Session Poisoning）**  配合 **PHP 弱类型比较（Type Juggling）**  导致。
 
