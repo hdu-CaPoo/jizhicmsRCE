@@ -1,7 +1,7 @@
 # CVE-2025-69901: JizhiCMS Authentication Bypass Vulnerability
 
 ## Overview
-- **CVE ID:** CVE-2025-69**1
+- **CVE ID:** CVE-2025-69901
 - **Vendor:** JizhiCMS
 - **Product:** JizhiCMS
 - **Version:** v2.5 and v2.5.4
